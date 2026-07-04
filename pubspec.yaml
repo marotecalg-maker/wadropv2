@@ -1,0 +1,44 @@
+name: wadrop
+description: "Wadrop — a professional water intake & fitness hydration tracker."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Local persistence
+  shared_preferences: ^2.3.2
+
+  # Charts for the statistics screen
+  fl_chart: ^0.69.2
+
+  # Step counting (walking distance in km)
+  pedometer: ^4.0.2
+  permission_handler: ^11.3.1
+
+  # Internationalization helpers (version pinned by flutter_localizations)
+  intl: any
+
+  # iOS-style iconography
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Enables generation of the localization delegate from the .arb files
+  # declared in l10n.yaml.
+  generate: true
