@@ -8,9 +8,9 @@ workflows:
       ios_signing:
         bundle_identifier: com.wadrop.app
         provisioning_profiles:
-          - Provisioning_wadro
+          - wardrop
         certificates:
-          - certificate2
+          - certificate
     scripts:
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
