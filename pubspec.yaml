@@ -1,7 +1,7 @@
 name: wadrop
 description: "Wadrop — a professional water intake & fitness hydration tracker."
 publish_to: 'none'
-version: 1.0.0+2
+version: 1.0.0+3
 
 environment:
   sdk: ^3.12.2
@@ -30,6 +30,9 @@ dependencies:
 
   # iOS-style iconography
   cupertino_icons: ^1.0.8
+
+  # Opening external links (e.g. privacy policy)
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/app_colors.dart';
 import '../../core/formatters.dart';
@@ -12,6 +13,11 @@ import '../../widgets/surface_card.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
+
+  static final Uri _privacyPolicyUri =
+      Uri.parse('https://sites.google.com/view/privacy-poc/accueil');
+  static final Uri _supportUri =
+      Uri.parse('https://sites.google.com/view/drobdalut/accueil');
 
   @override
   Widget build(BuildContext context) {
@@ -250,6 +256,26 @@ class SettingsScreen extends StatelessWidget {
                   ],
                 ),
 
+                // ---- About ----
+                _Section(
+                  title: l.sectionAbout,
+                  children: [
+                    _Tile(
+                      icon: Icons.privacy_tip_rounded,
+                      title: l.privacyPolicy,
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: () => _openPrivacyPolicy(context),
+                    ),
+                    const _Divider(),
+                    _Tile(
+                      icon: Icons.help_rounded,
+                      title: l.support,
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: () => _openSupport(context),
+                    ),
+                  ],
+                ),
+
                 const SizedBox(height: 20),
                 Text('${l.appName} · ${l.version} 1.0.0',
                     style: Theme.of(context).textTheme.labelMedium),
@@ -278,6 +304,14 @@ class SettingsScreen extends StatelessWidget {
         'ar' => 'العربية',
         _ => l.themeSystem,
       };
+
+  Future<void> _openPrivacyPolicy(BuildContext context) async {
+    await launchUrl(_privacyPolicyUri, mode: LaunchMode.externalApplication);
+  }
+
+  Future<void> _openSupport(BuildContext context) async {
+    await launchUrl(_supportUri, mode: LaunchMode.externalApplication);
+  }
 
   // ---- Dialogs --------------------------------------------------------------
 

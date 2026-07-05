@@ -1000,6 +1000,18 @@ abstract class AppLocalizations {
   /// **'Made with 💧 for people who forget to drink.'**
   String get madeWith;
 
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @support.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get support;
+
   /// No description provided for @save.
   ///
   /// In en, this message translates to:

@@ -474,6 +474,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get madeWith => 'Fait avec 💧 pour ceux qui oublient de boire.';
 
   @override
+  String get privacyPolicy => 'Politique de confidentialité';
+
+  @override
+  String get support => 'Assistance';
+
+  @override
   String get save => 'Enregistrer';
 
   @override

@@ -471,6 +471,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get madeWith => 'صُنع بـ 💧 لمن ينسى أن يشرب.';
 
   @override
+  String get privacyPolicy => 'سياسة الخصوصية';
+
+  @override
+  String get support => 'الدعم';
+
+  @override
   String get save => 'حفظ';
 
   @override

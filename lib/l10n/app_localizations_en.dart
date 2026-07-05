@@ -471,6 +471,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get madeWith => 'Made with 💧 for people who forget to drink.';
 
   @override
+  String get privacyPolicy => 'Privacy policy';
+
+  @override
+  String get support => 'Support';
+
+  @override
   String get save => 'Save';
 
   @override
